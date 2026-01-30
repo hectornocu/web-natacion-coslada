@@ -92,42 +92,11 @@
                         <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Sede</th>
                     </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-100">
-                    <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">10-11 Ene</td>
-                        <td class="px-6 py-4 text-sm text-slate-600">2ª Jda. Liga Madrid</td>
-                        <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">JUNIOR</span></td>
-                        <td class="px-6 py-4 text-sm text-slate-500">Móstoles / Canoe</td>
-                    </tr>
-                    
-                    <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">17-18 Ene</td>
-                        <td class="px-6 py-4 text-sm text-slate-600">2ª Jda. Liga Madrid</td>
-                        <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded">INFANTIL</span></td>
-                        <td class="px-6 py-4 text-sm text-slate-500">Rivas / Colmenar</td>
-                    </tr>
-
-                    <tr class="bg-red-50 hover:bg-red-100 transition-colors border-l-4 border-primary">
-                        <td class="px-6 py-4 text-sm font-bold text-primary">24 Ene</td>
-                        <td class="px-6 py-4 text-sm font-bold text-slate-900">3ª Jda. Liga Madrid</td>
-                        <td class="px-6 py-4"><span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-2 py-1 rounded">BENJAMÍN</span></td>
-                        <td class="px-6 py-4 text-sm font-bold text-primary flex items-center gap-2">
-                            <span class="material-symbols-outlined text-sm">home_pin</span> Piscina El Cerro (COSLADA)
+                <tbody id="tabla-competiciones" class="divide-y divide-slate-100">
+                    <tr>
+                        <td colspan="4" class="text-center py-8 text-slate-400">
+                            Cargando competiciones...
                         </td>
-                    </tr>
-
-                    <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">30 Ene - 01 Feb</td>
-                        <td class="px-6 py-4 text-sm text-slate-600">Open Absoluto Invierno</td>
-                        <td class="px-6 py-4"><span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-1 rounded">ABSOLUTO</span></td>
-                        <td class="px-6 py-4 text-sm text-slate-500">Centro M-86</td>
-                    </tr>
-
-                     <tr class="hover:bg-slate-50 transition-colors">
-                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">28 Feb</td>
-                        <td class="px-6 py-4 text-sm text-slate-600">Cto. Infantil Invierno</td>
-                        <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded">INFANTIL</span></td>
-                        <td class="px-6 py-4 text-sm text-slate-500">Centro M-86</td>
                     </tr>
                 </tbody>
             </table>
@@ -182,12 +151,88 @@
     </footer>
 
     <script>
+        // 1. LÓGICA DEL MENÚ MÓVIL
         const boton = document.getElementById('boton-menu-movil');
         const menu = document.getElementById('menu-movil');
 
         boton.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        // 2. LÓGICA DE LA "BASE DE DATOS" (Cargar JSON)
+        const tabla = document.getElementById('tabla-competiciones');
+
+        async function cargarCompeticiones() {
+            try {
+                // Hacemos la petición al archivo JSON
+                // IMPORTANTE: Este archivo debe existir en tu GitHub
+                const respuesta = await fetch('datos.json');
+                
+                if (!respuesta.ok) throw new Error("No se pudo leer el archivo JSON");
+
+                const datos = await respuesta.json();
+                
+                // Limpiamos el mensaje de "Cargando..."
+                tabla.innerHTML = '';
+
+                // Generamos las filas
+                datos.competiciones.forEach(competi => {
+                    
+                    // Definimos estilos dinámicos (Casa vs Fuera)
+                    let estiloFila = "hover:bg-slate-50 transition-colors";
+                    let iconoCasa = "";
+                    let claseTextoSede = "text-slate-500";
+                    let claseTextoNombre = "text-slate-600";
+
+                    if (competi.esCasa) {
+                        estiloFila = "bg-red-50 hover:bg-red-100 transition-colors border-l-4 border-primary";
+                        iconoCasa = '<span class="material-symbols-outlined text-sm">home_pin</span> ';
+                        claseTextoSede = "font-bold text-primary flex items-center gap-2";
+                        claseTextoNombre = "font-bold text-slate-900";
+                    }
+
+                    // Mapa de colores para las etiquetas
+                    const colores = {
+                        "blue": "bg-blue-100 text-blue-800",
+                        "emerald": "bg-emerald-100 text-emerald-800",
+                        "orange": "bg-orange-100 text-orange-800",
+                        "purple": "bg-purple-100 text-purple-800"
+                    };
+                    const colorTag = colores[competi.color] || "bg-slate-100 text-slate-800";
+
+                    // Template HTML de la fila
+                    const fila = `
+                        <tr class="${estiloFila}">
+                            <td class="px-6 py-4 text-sm font-semibold text-slate-900">${competi.fecha}</td>
+                            <td class="px-6 py-4 text-sm ${claseTextoNombre}">${competi.nombre}</td>
+                            <td class="px-6 py-4">
+                                <span class="${colorTag} text-[10px] font-bold px-2 py-1 rounded uppercase">${competi.categoria}</span>
+                            </td>
+                            <td class="px-6 py-4 text-sm ${claseTextoSede}">
+                                ${iconoCasa}${competi.sede}
+                            </td>
+                        </tr>
+                    `;
+
+                    // Añadimos la fila a la tabla
+                    tabla.innerHTML += fila;
+                });
+
+            } catch (error) {
+                console.error("Error cargando las competiciones:", error);
+                tabla.innerHTML = `
+                    <tr>
+                        <td colspan="4" class="text-center p-8 text-red-500 font-bold bg-red-50">
+                            <p>¡Ups! No pudimos cargar los datos.</p>
+                            <p class="text-xs font-normal text-slate-500 mt-2">(Asegúrate de haber subido el archivo datos.json a GitHub)</p>
+                        </td>
+                    </tr>
+                `;
+            }
+        }
+
+        // Ejecutar al cargar la página
+        cargarCompeticiones();
     </script>
 
 </body>

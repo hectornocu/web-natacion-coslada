@@ -1,0 +1,44 @@
+{
+  "competiciones": [
+    {
+      "fecha": "10-11 Ene",
+      "nombre": "2ª Jda. Liga Madrid",
+      "categoria": "JUNIOR",
+      "sede": "Móstoles / Canoe",
+      "color": "blue",
+      "esCasa": false
+    },
+    {
+      "fecha": "17-18 Ene",
+      "nombre": "2ª Jda. Liga Madrid",
+      "categoria": "INFANTIL",
+      "sede": "Rivas / Colmenar",
+      "color": "emerald",
+      "esCasa": false
+    },
+    {
+      "fecha": "24 Ene",
+      "nombre": "3ª Jda. Liga Madrid",
+      "categoria": "BENJAMÍN",
+      "sede": "Piscina El Cerro (COSLADA)",
+      "color": "orange",
+      "esCasa": true
+    },
+    {
+      "fecha": "30 Ene - 01 Feb",
+      "nombre": "Open Absoluto Invierno",
+      "categoria": "ABSOLUTO",
+      "sede": "Centro M-86",
+      "color": "purple",
+      "esCasa": false
+    },
+    {
+      "fecha": "28 Feb",
+      "nombre": "Cto. Infantil Invierno",
+      "categoria": "INFANTIL",
+      "sede": "Centro M-86",
+      "color": "emerald",
+      "esCasa": false
+    }
+  ]
+}
