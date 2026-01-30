@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Inscripciones | Club Natación Coslada</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#c0392b", "secondary": "#9ee1df", "background-light": "#f8fafc" },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style> body { font-family: 'Lexend', sans-serif; } </style>
+</head>
+
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-4">
+                    <img src="logo.jpeg" alt="Logo" class="h-12 w-auto object-contain">
+                    <div>
+                        <h1 class="text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
+                        <h1 class="text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="index.html">Inicio</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="historia.html">El Club</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="competiciones.html">Competiciones</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="calendario.html">Calendario</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="inscripcion.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold shadow-lg shadow-red-500/30 ring-2 ring-offset-2 ring-primary">
+                        ¡Inscríbete!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full">
+        
+        <div class="bg-slate-900 py-20 text-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+            
+            <div class="relative max-w-4xl mx-auto px-4">
+                <span class="text-secondary font-bold tracking-widest uppercase text-sm mb-4 block">Temporada 2026</span>
+                <h1 class="text-4xl md:text-5xl font-black text-white mb-6">Invierte en tu Pasión</h1>
+                <p class="text-slate-300 text-lg max-w-2xl mx-auto">
+                    Formar parte del Club Natación Coslada es mucho más que nadar. Es disciplina, salud y equipo.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 pb-20 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                    <div class="p-8 text-center border-b border-slate-100">
+                        <h3 class="text-xl font-bold text-slate-500 uppercase tracking-widest mb-2">Matrícula</h3>
+                        <div class="flex justify-center items-baseline gap-1 my-4">
+                            <span class="text-5xl font-black text-slate-900">90€</span>
+                            <span class="text-slate-500 font-medium">/ pago único</span>
+                        </div>
+                        <p class="text-sm text-slate-500">Se abona solo al entrar al club por primera vez.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 h-full">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Gestión de licencia federativa</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Pack de Bienvenida (Gorro oficial)</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Seguro deportivo anual</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-2xl border-2 border-primary overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        MÁS POPULAR
+                    </div>
+
+                    <div class="p-8 text-center border-b border-slate-100">
+                        <h3 class="text-xl font-bold text-primary uppercase tracking-widest mb-2">Mensualidad</h3>
+                        <div class="flex justify-center items-baseline gap-1 my-4">
+                            <span class="text-5xl font-black text-slate-900">60€</span>
+                            <span class="text-slate-500 font-medium">/ mes</span>
+                        </div>
+                        <p class="text-sm text-slate-500">Cuota fija mensual durante la temporada.</p>
+                    </div>
+                    <div class="p-8 bg-slate-50 h-full">
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Acceso completo a entrenamientos</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Dirección técnica profesional</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Inscripción a competiciones FMN</span>
+                            </li>
+                            <li class="flex items-start gap-3 text-sm text-slate-700">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Uso de gimnasio del club</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-primary/30">
+                            QUIERO INSCRIBIRME
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="max-w-3xl mx-auto px-4 pb-20">
+            <h3 class="text-2xl font-bold text-slate-900 mb-8 text-center">Preguntas Frecuentes</h3>
+            
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-lg p-5 bg-white">
+                    <h4 class="font-bold text-slate-900 mb-2">¿Hay descuentos para hermanos?</h4>
+                    <p class="text-sm text-slate-600">Sí, aplicamos un 10% de descuento en la cuota mensual a partir del segundo hermano inscrito en el club.</p>
+                </div>
+                <div class="border border-slate-200 rounded-lg p-5 bg-white">
+                    <h4 class="font-bold text-slate-900 mb-2">¿Cómo se realizan los pagos?</h4>
+                    <p class="text-sm text-slate-600">Los pagos se realizan mediante domiciliación bancaria entre el día 1 y 5 de cada mes.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs text-slate-400">© 2026 Club Natación Coslada.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

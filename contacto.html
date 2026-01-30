@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contacto | Club Natación Coslada</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#c0392b", "secondary": "#9ee1df", "background-light": "#f8fafc" },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style> 
+        body { font-family: 'Lexend', sans-serif; } 
+        /* Clase para el mapa */
+        .mapa-elegante { filter: grayscale(100%); transition: filter 0.5s ease; }
+        .mapa-elegante:hover { filter: grayscale(0%); }
+    </style>
+</head>
+
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-4">
+                    <img src="logo.png" alt="Logo" class="h-12 w-auto object-contain">
+                    <div>
+                        <h1 class="text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
+                        <h1 class="text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="index.html">Inicio</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="historia.html">El Club</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="competiciones.html">Competiciones</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="calendario.html">Calendario</a>
+                    <a class="text-sm font-bold text-primary transition-colors" href="contacto.html">Contacto</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="inscripcion.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">¡Inscríbete!</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <div class="bg-primary/5 py-12 text-center border-b border-primary/10">
+            <h2 class="text-4xl font-black text-slate-900">Contacta con Nosotros</h2>
+            <p class="text-slate-500 mt-4 text-lg">¿Dudas sobre las pruebas de acceso o los horarios? Estamos aquí.</p>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900">Datos de Contacto</h3>
+                    
+                    <div class="flex items-center gap-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
+                        <div class="size-12 bg-red-100 text-primary rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined">call</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-bold uppercase">Teléfono / WhatsApp</p>
+                            <p class="text-lg font-bold text-slate-900">620 10 70 77</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
+                        <div class="size-12 bg-red-100 text-primary rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-bold uppercase">Correo Electrónico</p>
+                            <p class="text-lg font-bold text-slate-900">natacioncoslada@yahoo.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-6 bg-white rounded-xl border border-slate-200 shadow-sm">
+                        <div class="size-12 bg-red-100 text-primary rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-500 font-bold uppercase">Ubicación</p>
+                            <p class="text-lg font-bold text-slate-900">Polideportivo El Cerro</p>
+                            <p class="text-sm text-slate-500">Calle Moscú, S/N, Coslada</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6">Envíanos un mensaje</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Nombre</label>
+                                <input type="text" class="w-full bg-slate-50 border-none rounded-lg focus:ring-2 focus:ring-primary p-3" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Teléfono</label>
+                                <input type="text" class="w-full bg-slate-50 border-none rounded-lg focus:ring-2 focus:ring-primary p-3" placeholder="600 000 000">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Email</label>
+                            <input type="email" class="w-full bg-slate-50 border-none rounded-lg focus:ring-2 focus:ring-primary p-3" placeholder="ejemplo@correo.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Mensaje</label>
+                            <textarea rows="4" class="w-full bg-slate-50 border-none rounded-lg focus:ring-2 focus:ring-primary p-3" placeholder="¿En qué podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-4 rounded-lg hover:bg-red-700 transition-all shadow-md">
+                            ENVIAR CONSULTA
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full h-[450px] overflow-hidden shadow-inner border-t border-slate-200 relative group">
+            <iframe 
+                src="https://maps.google.com/maps?q=Polideportivo+El+Cerro+Coslada&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                class="mapa-elegante"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur px-6 py-4 rounded-xl shadow-2xl border border-white/50 max-w-xs transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
+                <div class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                    <div>
+                        <h5 class="font-bold text-sm text-slate-900">Polideportivo El Cerro</h5>
+                        <p class="text-xs text-slate-500 leading-relaxed mt-1">Calle Moscú, S/N<br>28821 Coslada, Madrid</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs text-slate-400">© 2026 Club Natación Coslada.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

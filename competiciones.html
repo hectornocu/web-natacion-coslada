@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Competiciones | Club Natación Coslada</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c0392b", 
+                        "secondary": "#9ee1df", 
+                        "background-light": "#f8fafc",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style> body { font-family: 'Lexend', sans-serif; } </style>
+</head>
+
+<body class="bg-background-light text-slate-900 min-h-screen flex flex-col">
+
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-4">
+                    <img src="logo.jpeg" alt="Logo CN Coslada" class="h-12 w-auto object-contain">
+                    <div>
+                        <h1 class="text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
+                        <h1 class="text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
+                    </div>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="index.html">Inicio</a>
+                    <a class="text-sm font-bold text-primary transition-colors" href="competiciones.html">Competiciones</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="historia.html">El Club</a>
+                    <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="contacto.html">Contacto</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="inscripcion.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">
+                        ¡Inscríbete!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
+        
+        <div class="text-center mb-12">
+            <span class="text-primary font-bold text-sm tracking-widest uppercase mb-2 block">Temporada 2026</span>
+            <h2 class="text-4xl font-black text-slate-900">Calendario de Competiciones</h2>
+            <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Consulta las fechas oficiales de la Federación Madrileña de Natación. Las competiciones marcadas en rojo se celebran en nuestra piscina.</p>
+        </div>
+
+        <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-slate-50 border-b border-slate-200">
+                        <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Fecha</th>
+                        <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Competición</th>
+                        <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Categoría</th>
+                        <th class="px-6 py-4 text-xs font-bold text-slate-500 uppercase tracking-wider">Sede</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100">
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">10-11 Ene</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">2ª Jda. Liga Madrid</td>
+                        <td class="px-6 py-4"><span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded">JUNIOR</span></td>
+                        <td class="px-6 py-4 text-sm text-slate-500">Móstoles / Canoe</td>
+                    </tr>
+                    
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">17-18 Ene</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">2ª Jda. Liga Madrid</td>
+                        <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded">INFANTIL</span></td>
+                        <td class="px-6 py-4 text-sm text-slate-500">Rivas / Colmenar</td>
+                    </tr>
+
+                    <tr class="bg-red-50 hover:bg-red-100 transition-colors border-l-4 border-primary">
+                        <td class="px-6 py-4 text-sm font-bold text-primary">24 Ene</td>
+                        <td class="px-6 py-4 text-sm font-bold text-slate-900">3ª Jda. Liga Madrid</td>
+                        <td class="px-6 py-4"><span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-2 py-1 rounded">BENJAMÍN</span></td>
+                        <td class="px-6 py-4 text-sm font-bold text-primary flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm">home_pin</span> Piscina El Cerro (COSLADA)
+                        </td>
+                    </tr>
+
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">30 Ene - 01 Feb</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Open Absoluto Invierno</td>
+                        <td class="px-6 py-4"><span class="bg-purple-100 text-purple-800 text-[10px] font-bold px-2 py-1 rounded">ABSOLUTO</span></td>
+                        <td class="px-6 py-4 text-sm text-slate-500">Centro M-86</td>
+                    </tr>
+
+                     <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="px-6 py-4 text-sm font-semibold text-slate-900">28 Feb</td>
+                        <td class="px-6 py-4 text-sm text-slate-600">Cto. Infantil Invierno</td>
+                        <td class="px-6 py-4"><span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded">INFANTIL</span></td>
+                        <td class="px-6 py-4 text-sm text-slate-500">Centro M-86</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="mt-8 text-center">
+            <button class="text-sm font-bold text-primary hover:text-red-800 flex items-center justify-center gap-2 mx-auto">
+                <span class="material-symbols-outlined">download</span> Descargar Calendario PDF Completo
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-
