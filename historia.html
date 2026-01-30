@@ -35,13 +35,15 @@
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
+                
                 <div class="flex items-center gap-4">
-                    <img src="logo.jpeg" alt="Logo" class="h-12 w-auto object-contain">
+                    <img src="logo.jpeg" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
                     <div>
-                        <h1 class="text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
-                        <h1 class="text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
+                        <h1 class="text-sm md:text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
+                        <h1 class="text-sm md:text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
                     </div>
                 </div>
+
                 <nav class="hidden md:flex items-center gap-8">
                     <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="index.html">Inicio</a>
                     <a class="text-sm font-bold text-primary transition-colors" href="historia.html">El Club</a>
@@ -49,11 +51,25 @@
                     <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="calendario.html">Calendario</a>
                     <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="contacto.html">Contacto</a>
                 </nav>
+
                 <div class="flex items-center gap-4">
-                    <a href="inscripcion.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">
+                    <a href="inscripcion.html" class="bg-primary text-white px-3 py-2 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">
                         ¡Inscríbete!
                     </a>
+                    <button id="boton-menu-movil" class="md:hidden text-slate-900 p-2 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl z-50">
+            <div class="flex flex-col p-4 space-y-4">
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="index.html">Inicio</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="historia.html">El Club</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="competiciones.html">Competiciones</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="calendario.html">Calendario</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2" href="contacto.html">Contacto</a>
             </div>
         </div>
     </header>
@@ -76,48 +92,44 @@
             
             <div class="relative pl-8 md:pl-12 group">
                 <div class="absolute -left-[10px] md:-left-[10px] top-2 size-6 bg-primary rounded-full border-4 border-white shadow-md group-hover:scale-125 transition-transform"></div>
-                
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <span class="inline-block bg-primary/10 text-primary font-bold px-3 py-1 rounded-full text-xs mb-3">2024 - Actualidad</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">La Era de la Modernización</h3>
                     <p class="text-slate-600 leading-relaxed">
-                        El club da un salto tecnológico renovando su imagen digital y optimizando la gestión de inscripciones. A nivel deportivo, nuestro equipo Alevín se consolida entre los 10 mejores de Madrid, y Coslada es elegida sede oficial para competiciones de la Liga Benjamín, reafirmando nuestras instalaciones de El Cerro como un referente.
+                        El club da un salto tecnológico renovando su imagen digital y optimizando la gestión de inscripciones. A nivel deportivo, nuestro equipo Alevín se consolida entre los 10 mejores de Madrid.
                     </p>
                 </div>
             </div>
 
             <div class="relative pl-8 md:pl-12 group">
                 <div class="absolute -left-[10px] top-2 size-6 bg-white border-4 border-slate-300 rounded-full group-hover:border-primary transition-colors"></div>
-                
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <span class="inline-block bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded-full text-xs mb-3">2015 - 2020</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Consolidación en Primera División</h3>
                     <p class="text-slate-600 leading-relaxed">
-                        Años dorados donde el equipo absoluto logró el ascenso y la permanencia en la Primera División de la Liga de Madrid. Se batieron récords históricos del club en relevos y varios nadadores lograron mínimas para los Campeonatos de España, llevando el escudo de Coslada a nivel nacional.
+                        Años dorados donde el equipo absoluto logró el ascenso y la permanencia en la Primera División de la Liga de Madrid. Se batieron récords históricos del club.
                     </p>
                 </div>
             </div>
 
             <div class="relative pl-8 md:pl-12 group">
                 <div class="absolute -left-[10px] top-2 size-6 bg-white border-4 border-slate-300 rounded-full group-hover:border-primary transition-colors"></div>
-                
                 <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <span class="inline-block bg-slate-100 text-slate-600 font-bold px-3 py-1 rounded-full text-xs mb-3">2000 - 2010</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">Un Club para Todos</h3>
                     <p class="text-slate-600 leading-relaxed">
-                        Con la ampliación de las instalaciones municipales, el club creció exponencialmente en número de licencias. Se creó la Escuela de Natación base, fundamental para nutrir al equipo de competición. Fue la década donde se forjó el carácter de "familia" que hoy nos define, integrando las secciones Máster y de Natación Adaptada.
+                        Se creó la Escuela de Natación base, fundamental para nutrir al equipo de competición. Fue la década donde se forjó el carácter de "familia" que hoy nos define.
                     </p>
                 </div>
             </div>
 
             <div class="relative pl-8 md:pl-12 group">
                 <div class="absolute -left-[10px] top-2 size-6 bg-secondary border-4 border-white shadow-md"></div>
-                
                 <div class="bg-white p-6 rounded-xl border-l-4 border-primary shadow-sm">
                     <span class="inline-block bg-primary text-white font-bold px-3 py-1 rounded-full text-xs mb-3">1988</span>
                     <h3 class="text-2xl font-bold text-slate-900 mb-2">El Origen</h3>
                     <p class="text-slate-600 leading-relaxed">
-                        Un grupo de padres y apasionados del agua decidió fundar el <strong>Club Natación Coslada</strong> con el objetivo de fomentar el deporte base en nuestra ciudad. Con pocos recursos pero mucha ilusión, se firmaron los primeros estatutos y comenzaron los primeros entrenamientos en la antigua piscina municipal, sembrando la semilla de lo que somos hoy.
+                        Un grupo de padres y apasionados del agua decidió fundar el <strong>Club Natación Coslada</strong>. Con pocos recursos pero mucha ilusión, se firmaron los primeros estatutos.
                     </p>
                 </div>
             </div>
@@ -172,16 +184,26 @@
                 <div>
                     <h5 class="font-bold text-sm mb-6">Redes</h5>
                     <div class="flex gap-4">
-                        <a href="#" class="text-slate-400 hover:text-primary">Facebook</a>
-                        <a href="#" class="text-slate-400 hover:text-primary">Instagram</a>
+                        <a href="https://www.facebook.com/natacioncoslada/?locale=es_ES" target="_blank" class="text-slate-400 hover:text-primary transition-colors">Facebook</a>
+                        <a href="https://www.instagram.com/clubnatacioncoslada/?hl=es" target="_blank" class="text-slate-400 hover:text-primary transition-colors">Instagram</a>
+                        <a href="https://twitter.com/cncoslada" target="_blank" class="text-slate-400 hover:text-primary transition-colors">Twitter / X</a>
                     </div>
                 </div>
             </div>
             <div class="border-t border-slate-100 pt-6 text-center">
-                <p class="text-xs text-slate-400">© 2026 Club Natación Coslada.</p>
+                <p class="text-xs text-slate-400">© 2026 Club Natación Coslada. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        const boton = document.getElementById('boton-menu-movil');
+        const menu = document.getElementById('menu-movil');
+
+        boton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 
 </body>
 </html>

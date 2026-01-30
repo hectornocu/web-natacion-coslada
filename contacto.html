@@ -22,7 +22,6 @@
     </script>
     <style> 
         body { font-family: 'Lexend', sans-serif; } 
-        /* Clase para el mapa */
         .mapa-elegante { filter: grayscale(100%); transition: filter 0.5s ease; }
         .mapa-elegante:hover { filter: grayscale(0%); }
     </style>
@@ -34,12 +33,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-4">
-                    <img src="logo.jpeg" alt="Logo" class="h-12 w-auto object-contain">
+                    <img src="logo.jpeg" alt="Logo" class="h-10 md:h-12 w-auto object-contain">
                     <div>
-                        <h1 class="text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
-                        <h1 class="text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
+                        <h1 class="text-sm md:text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
+                        <h1 class="text-sm md:text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
                     </div>
                 </div>
+
                 <nav class="hidden md:flex items-center gap-8">
                     <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="index.html">Inicio</a>
                     <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="historia.html">El Club</a>
@@ -47,9 +47,25 @@
                     <a class="text-sm font-bold text-slate-600 hover:text-primary transition-colors" href="calendario.html">Calendario</a>
                     <a class="text-sm font-bold text-primary transition-colors" href="contacto.html">Contacto</a>
                 </nav>
+
                 <div class="flex items-center gap-4">
-                    <a href="inscripcion.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">¡Inscríbete!</a>
+                    <a href="inscripcion.html" class="bg-primary text-white px-3 py-2 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">
+                        ¡Inscríbete!
+                    </a>
+                    <button id="boton-menu-movil" class="md:hidden text-slate-900 p-2 focus:outline-none">
+                        <span class="material-symbols-outlined text-3xl">menu</span>
+                    </button>
                 </div>
+            </div>
+        </div>
+
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl z-50">
+            <div class="flex flex-col p-4 space-y-4">
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="index.html">Inicio</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="historia.html">El Club</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="competiciones.html">Competiciones</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="calendario.html">Calendario</a>
+                <a class="text-base font-bold text-slate-900 hover:text-primary block py-2" href="contacto.html">Contacto</a>
             </div>
         </div>
     </header>
@@ -128,9 +144,9 @@
             </div>
         </div>
 
-        <div class="w-full h-[450px] overflow-hidden shadow-inner border-t border-slate-200 relative group">
+        <div class="w-full h-[300px] md:h-[450px] overflow-hidden shadow-inner border-t border-slate-200 relative group">
             <iframe 
-                src="https://maps.google.com/maps?q=Polideportivo+El+Cerro+Coslada&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.004663376263!2d-3.5548666!3d40.4280556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd423011b0e5b3a9%3A0x6291350a45b7330!2sPolideportivo%20Municipal%20El%20Cerro!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
                 width="100%" 
                 height="100%" 
                 style="border:0;" 
@@ -154,11 +170,57 @@
     </main>
 
     <footer class="bg-white border-t border-slate-200 pt-12 pb-6">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xs text-slate-400">© 2026 Club Natación Coslada.</p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <h2 class="text-md font-extrabold tracking-tight uppercase text-primary">CN Coslada</h2>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">Fomentando el deporte acuático y el espíritu competitivo desde 1988.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm mb-6">Enlaces Rápidos</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="historia.html">El Club</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="competiciones.html">Competiciones</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="horarios.html">Horarios</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="inscripcion.html">Cuotas</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm mb-6">Legal</h5>
+                    <ul class="space-y-4 text-sm text-slate-500">
+                        <li><a class="hover:text-primary transition-colors" href="#">Aviso Legal</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-sm mb-6">Boletín</h5>
+                    <div class="flex">
+                        <input class="flex-1 bg-slate-100 border-none rounded-l-lg text-sm px-4 focus:ring-1 focus:ring-primary outline-none" placeholder="Tu email" type="text"/>
+                        <button class="bg-primary text-white p-2 rounded-r-lg hover:bg-red-700 transition-colors"><span class="material-symbols-outlined">send</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-slate-400">© 2026 Club Natación Coslada. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/natacioncoslada/?locale=es_ES" target="_blank" class="text-slate-400 hover:text-primary transition-colors">Facebook</a>
+                    <a href="https://www.instagram.com/clubnatacioncoslada/?hl=es" target="_blank" class="text-slate-400 hover:text-primary transition-colors">Instagram</a>
+                    <a href="https://twitter.com/cncoslada" target="_blank" class="text-slate-400 hover:text-primary transition-colors">Twitter / X</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-</body>
+    <script>
+        const boton = document.getElementById('boton-menu-movil');
+        const menu = document.getElementById('menu-movil');
 
+        boton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
 </html>

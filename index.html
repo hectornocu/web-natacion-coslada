@@ -46,11 +46,12 @@
 <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
+            
             <div class="flex items-center gap-4">
-                <img src="logo.jpeg" alt="Logo CN Coslada" class="h-12 w-auto object-contain">
+                <img src="logo.jpeg" alt="Logo CN Coslada" class="h-10 md:h-12 w-auto object-contain">
                 <div>
-                    <h1 class="text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
-                    <h1 class="text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
+                    <h1 class="text-sm md:text-lg font-extrabold tracking-tight text-slate-900 uppercase leading-none">Club Natación</h1>
+                    <h1 class="text-sm md:text-lg font-extrabold tracking-tight text-primary uppercase leading-none">Coslada</h1>
                 </div>
             </div>
 
@@ -63,10 +64,24 @@
             </nav>
 
             <div class="flex items-center gap-4">
-                <a href="inscripcion.html" class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">
+                <a href="inscripcion.html" class="bg-primary text-white px-3 py-2 md:px-5 md:py-2 rounded-lg text-xs md:text-sm font-bold hover:bg-red-700 transition-all shadow-lg shadow-red-500/30">
                     ¡Inscríbete!
                 </a>
+                
+                <button id="boton-menu-movil" class="md:hidden text-slate-900 p-2 focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
             </div>
+        </div>
+    </div>
+
+    <div id="menu-movil" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl z-50">
+        <div class="flex flex-col p-4 space-y-4">
+            <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="index.html">Inicio</a>
+            <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="historia.html">El Club</a>
+            <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="competiciones.html">Competiciones</a>
+            <a class="text-base font-bold text-slate-900 hover:text-primary block py-2 border-b border-slate-50" href="calendario.html">Calendario</a>
+            <a class="text-base font-bold text-slate-900 hover:text-primary block py-2" href="contacto.html">Contacto</a>
         </div>
     </div>
 </header>
@@ -136,9 +151,8 @@
             </div>
         </div>
         
-        <div class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-            <table class="w-full text-left border-collapse">
-                <thead>
+        <div class="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+            <table class="w-full text-left border-collapse min-w-[600px]"> <thead>
                     <tr class="bg-slate-50">
                         <th class="px-6 py-4 text-sm font-bold text-slate-900 uppercase tracking-wider">Categoría</th>
                         <th class="px-6 py-4 text-sm font-bold text-slate-900 uppercase tracking-wider">Días</th>
@@ -238,7 +252,7 @@
             </a>
         </div>
 
-        <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 relative group">
+        <div class="w-full h-[300px] md:h-[450px] rounded-2xl overflow-hidden shadow-lg border border-slate-200 relative group">
             
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.5432!2d-3.5488!3d40.4192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd423177d5816c89%3A0x5ed72db8bd2558ac!2sPolideportivo%20El%20Cerro!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
@@ -309,6 +323,15 @@
         </div>
     </div>
 </footer>
+
+<script>
+    const boton = document.getElementById('boton-menu-movil');
+    const menu = document.getElementById('menu-movil');
+
+    boton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
 
 </body>
 </html>
